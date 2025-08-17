@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import Google Fonts (fixed: removed url() and used quotes) */
+@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,12 +96,8 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground border-border;
   }
 
   html {
@@ -137,6 +135,7 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+    text-wrap: pretty; /* fallback */
   }
 }
 
