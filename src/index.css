@@ -1,5 +1,5 @@
 /* Import Google Fonts (safe form) */
-@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -132,8 +132,7 @@
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
-    text-wrap: pretty; /* fallback */
+    text-wrap: pretty; /* safe fallback only */
   }
 }
 
